@@ -27,3 +27,12 @@
 * Promise 使用 `bluebird`
   * <https://github.com/petkaantonov/bluebird>
 * 研究如何寫自動化測試
+
+## 筆記
+
+* express-generator
+
+```sh
+cd ~/git/express-login
+express --pug --git -f .
+```
