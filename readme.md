@@ -63,3 +63,8 @@ npm i -g nodemon
 ```
 
 ### sequelize-cli
+
+```js
+npm i --save sequelize
+npm i -g sequelize-cli
+```
