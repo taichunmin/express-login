@@ -1,0 +1,13 @@
+{
+  "restartable": "rs",
+  "ignore": [],
+  "verbose": true,
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "env": {
+    "DEBUG": "express-login:*",
+    "NODE_ENV": "development"
+  },
+  "ext": "js json pug"
+}

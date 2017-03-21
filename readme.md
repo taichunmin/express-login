@@ -15,12 +15,12 @@
 
 ## 特殊項目
 
+* 使用 `express` 框架（`express-generator`）加上 `pug` 樣板
 * 密碼需用雜湊儲存
   * <https://github.com/kelektiv/node.bcrypt.js>
 * MySQL 使用 `Sequelize` 和 `sequelize-cli`
   * <https://github.com/sequelize/sequelize>
   * <https://github.com/sequelize/cli>
-* 使用 `express` 框架（`express-generator`）加上 `pug` 樣板
 * 使用 `co` 和 `co-express` 來寫
   * <https://github.com/tj/co>
   * <https://github.com/mciparelli/co-express>
@@ -30,9 +30,36 @@
 
 ## 筆記
 
-* express-generator
+### express-generator
 
 ```sh
 cd ~/git/express-login
 express --pug --git -f .
+npm install
 ```
+
+### nodemon
+
+```sh
+npm i -g nodemon
+```
+
+* `nodemon.json`
+
+```json
+{
+  "restartable": "rs",
+  "ignore": [],
+  "verbose": true,
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "env": {
+    "DEBUG": "express-login:*",
+    "NODE_ENV": "development"
+  },
+  "ext": "js json pug"
+}
+```
+
+### sequelize-cli
