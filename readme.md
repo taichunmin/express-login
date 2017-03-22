@@ -38,6 +38,8 @@ express --pug --git -f .
 npm install
 ```
 
+* 修改部分預設程式碼以符合 standard.js
+
 ### nodemon
 
 ```sh
@@ -65,6 +67,24 @@ npm i -g nodemon
 ### sequelize-cli
 
 ```js
-npm i --save sequelize
+npm i --save sequelize mysql
 npm i -g sequelize-cli
+sequelize init
+```
+
+* 修改部分預設程式碼以符合 standard.js
+
+## 資料庫
+
+* User
+  * id
+  * username
+  * passwd
+  * facebook
+  * facebook_data
+  * google
+  * google_data
+
+```sh
+sequelize model:create --underscored --name user --attributes 'username:string passwd:string facebook:string facebook_data:text google:string google_data:text'
 ```
