@@ -1,5 +1,8 @@
 'use strict'
 
+var bcrypt = require('bcrypt')
+const saltRounds = 10
+
 module.exports = {
   up: function (queryInterface, Sequelize) {
     /*
@@ -12,6 +15,10 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+    return queryInterface.bulkInsert('users', [{
+      username: 'taichunmin',
+      passwd: bcrypt.hashSync('12345678', saltRounds)
+    }])
   },
 
   down: function (queryInterface, Sequelize) {
@@ -22,5 +29,8 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
+    return queryInterface.bulkDelete('users', null, {
+      truncate: true
+    })
   }
 }

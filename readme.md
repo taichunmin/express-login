@@ -88,3 +88,23 @@ sequelize init
 ```sh
 sequelize model:create --underscored --name user --attributes 'username:string passwd:string facebook:string facebook_data:text google:string google_data:text'
 ```
+
+## pug
+
+```
+npm i --save pug
+npm i --save-dev pug-lint pug-lint-config-clock
+```
+
+## express-session
+
+```
+npm i --save express-session express-mysql-session
+```
+
+* generate session secret
+
+```
+node -i
+> console.log(require('crypto').randomBytes(15).toString('base64'))
+```
